@@ -1,0 +1,28 @@
+#lambda - (trial)
+x = lambda q: q + 20
+print(x(10))
+
+#syntax
+lambda arguments : expression
+
+#with Minus argument
+t = lambda y, z: y - z
+print(t(10, 6))
+
+
+#lambda function that will double the number 
+def myfunc(f):
+  return lambda a : a * f
+
+mydoubler = myfunc(5)
+
+print(mydoubler(11))
+
+#boolean
+a = 43
+b = 67
+
+if b > a:
+  print("{0} is greater than {1).format(b, a)")
+else: 
+  print("a is greater than b")
