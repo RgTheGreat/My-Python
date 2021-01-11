@@ -1,8 +1,8 @@
 import re
 
 
-txt = "I live in India"
-x = re.search("^I.*India$", txt)
+statment = "I live in India"
+x = re.search("^I.*India$", statment)
 
 if x:
   print("YES! I live in India!!")
