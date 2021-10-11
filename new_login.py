@@ -1,60 +1,36 @@
-import sys 
-# still in progress 
-
-
- a = input("Enter your password: ")
-  b = int(input("Enter your age: "))
+a = input("Enter your name: ")
+b = input("Enter your password: ")
+c = input("Enter your age(in letters): ")
 
 data = {
-	"username": "rbysre"
-	"password": "e713fGH",
-    "age": 12
+	"username": a,
+	"password": b,
+    "age": c
 }
 
 
-
-
-
-
-
-
-# if fail:
 class fail:
-  def __init__(self, fail, name):
-    self.fail = fail
-    self.name = name
+    def __init__(self, exception, prevent):
+        self.exception = exception
+        self.prevent = prevent
 
-  def func1(self):
-    print(sys.platform() + "," + self.name + self.fail)
-
-x = fail("Can't Log", data["username"])
-x.func1()
+    def printError(self):
+        print("Exception: " + self.exception + " Prevention: " + self.prevent) 
 
 
+class success:
+    def __init__(self, statement):
+        self.statement = statement
 
-# If success:
-class succuess:
-    def __init__(s, succuess, name)
-      s.succuess = succuess
-      s.name = name
-    
-    def func2(s):
-      print(sys.platform() + "," + s.name + s.success)
-
-y = main("Loged in!", data["username"])
-y.func2()
+    def printSuccess(self):
+        print(self.statement)
 
 
-
-
-
-# lgpy
-if a != data["password"]:
-    
-elif a == data["password"]:
-    success()
-
-
-if b != data["password"]:
-# pull requests needed!
+for x in data:
+    if data[x] == None or data[x] == '':
+        error = fail("name/pswd/age not entered", "You have to enter all the inputs") 
+        error.printError()
+    else:
+        succes = success("Loged in!")
+        succes.printSuccess()
 
